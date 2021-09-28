@@ -1,4 +1,4 @@
-# game inspired by jump king
+# game inspired by jump king yurr
 
 import pygame
 import time

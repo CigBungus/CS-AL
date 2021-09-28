@@ -1,3 +1,5 @@
+# game inspired by jump king
+
 import pygame
 import time
 import math

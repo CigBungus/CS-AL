@@ -3,27 +3,23 @@ import time
 import math
 pygame.init()
 
-SCREEN_WIDTH = 1920
-SCREEN_HEIGHT = 1080
+SCREEN_WIDTH = 700
+SCREEN_HEIGHT = 700
 
 win = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-pygame.display.set_caption("bugs jump v1.0")
+pygame.display.set_caption("jump game")
 
 
 width = 64
 height = 64
-x = (1920/2)-height
-y = (1080/2)-width
+x = (SCREEN_WIDTH/2)-(width/2)
+y = (SCREEN_HEIGHT/2)-(height/2)
 
 vel = 2
 
 isJump = False
 jumpCount = 10
-
-left = False
-right = False
-walkCount = 0
 
 run = True
 
@@ -60,7 +56,7 @@ while run:
             isJump = False
             jumpCount = 10
 
-    win.fill((255, 255, 255))
+    win.fill((245, 231, 218))
     pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))
     pygame.display.update()
 

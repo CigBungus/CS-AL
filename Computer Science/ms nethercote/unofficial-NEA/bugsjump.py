@@ -18,7 +18,7 @@ height = 64
 x = (SCREEN_WIDTH/2)-(width/2)
 y = (SCREEN_HEIGHT/2)-(height/2)
 
-vel = 2
+vel = 0.5
 
 isJump = False
 jumpCount = 10

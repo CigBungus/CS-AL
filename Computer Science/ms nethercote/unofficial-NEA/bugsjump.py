@@ -14,11 +14,11 @@ pygame.display.set_caption("jump game")
 
 
 width = 64
-height = 64
+height = 80
 x = (SCREEN_WIDTH/2)-(width/2)
-y = (SCREEN_HEIGHT/2)-(height/2)
+y = SCREEN_HEIGHT-height
 
-vel = 0.5
+vel = 10
 
 isJump = False
 jumpCount = 10
@@ -28,7 +28,7 @@ run = True
 
 
 while run:
-    pygame.time.delay(10)
+    pygame.time.delay(30)
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -59,7 +59,7 @@ while run:
             jumpCount = 10
 
     win.fill((245, 231, 218))
-    pygame.draw.rect(win, (255, 0, 0), (x, y, width, height))
+    pygame.draw.rect(win, (104, 117, 94), (x, y, width, height))
     pygame.display.update()
 
 pygame.quit()

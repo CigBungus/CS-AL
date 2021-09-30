@@ -1,8 +1,6 @@
 # game inspired by jump king yurr
 
 import pygame
-import time
-import math
 pygame.init()
 
 SCREEN_WIDTH = 700
@@ -24,8 +22,6 @@ isJump = False
 jumpCount = 10
 
 run = True
-
-
 
 while run:
     pygame.time.delay(30)
@@ -61,6 +57,7 @@ while run:
     win.fill((245, 231, 218))
     pygame.draw.rect(win, (104, 117, 94), (x, y, width, height))
     pygame.display.update()
+
 
 pygame.quit()
 

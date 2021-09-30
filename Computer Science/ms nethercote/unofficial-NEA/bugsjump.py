@@ -10,7 +10,6 @@ win = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 pygame.display.set_caption("jump game")
 
-
 width = 64
 height = 80
 x = (SCREEN_WIDTH/2)-(width/2)
@@ -60,5 +59,8 @@ while run:
 
 
 pygame.quit()
+
+
+
 
 

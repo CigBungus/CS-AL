@@ -1,4 +1,4 @@
-# game inspired by jump king yurr
+# game inspired by jump king 
 
 import pygame
 pygame.init()
@@ -10,6 +10,11 @@ win = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 pygame.display.set_caption("jump game")
 
+walkRight = [pygame.image.load('R1.png'), pygame.image.load('R2.png'), pygame.image.load('R3.png'), pygame.image.load('R4.png'), pygame.image.load('R5.png'), pygame.image.load('R6.png'), pygame.image.load('R7.png'), pygame.image.load('R8.png'), pygame.image.load('R9.png')]
+walkLeft = [pygame.image.load('L1.png'), pygame.image.load('L2.png'), pygame.image.load('L3.png'), pygame.image.load('L4.png'), pygame.image.load('L5.png'), pygame.image.load('L6.png'), pygame.image.load('L7.png'), pygame.image.load('L8.png'), pygame.image.load('L9.png')]
+bg = pygame.image.load('bg.jpg')
+char = pygame.image.load('standing.png')
+
 width = 64
 height = 80
 x = (SCREEN_WIDTH/2)-(width/2)
@@ -19,6 +24,10 @@ vel = 10
 
 isJump = False
 jumpCount = 10
+
+left = False
+right = False
+walkCount = 0
 
 run = True
 
@@ -36,10 +45,6 @@ while run:
     if keys[pygame.K_d] and x < SCREEN_WIDTH - width:
         x += vel
     if not(isJump):
-        if keys[pygame.K_w] and y > 0:
-            y -= vel
-        if keys[pygame.K_s] and y < SCREEN_HEIGHT - height:
-            y += vel
         if keys[pygame.K_SPACE]:
             isJump = True
     else:

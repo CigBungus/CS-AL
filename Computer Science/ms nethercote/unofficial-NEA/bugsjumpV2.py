@@ -1,40 +1,18 @@
-import pygame
-from pygame.locals import *
+import pygame, sys
+from settings import *
 
-def main():
+# pygame setup
+pygame.init()
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+clock = pygame.time.Clock()
 
-    WIN_SIZE = 400, 400
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
 
-    # initialise screen
-    pygame.init()
-    screen = pygame.display.set_mode((WIN_SIZE))
-    pygame.display.set_caption("jump king -_-")
+    screen.fill("black")
 
-    # fill background
-    background = pygame.Surface(screen.get_size())
-    background = background.convert()
-    background.fill((250, 250, 250))
-
-    # display some text
-    font = pygame.font.Font(None, 36)
-    text = font.render("Hello There", 1, (10, 10, 10))
-    textpos = text.get_rect()
-    textpos.centerx = background.get_rect().centerx
-    background.blit(text, textpos)
-
-    # Blit everything to the screen
-    screen.blit(background, (0, 0))
-    pygame.display.flip()
-
-    # Event loop
-    while True:
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                return
-
-        screen.blit(background, (0, 0))
-        pygame.display.flip()
-
-
-if __name__ == '__main__': 
-    main()
+    pygame.display.update()
+    clock.tick(60)

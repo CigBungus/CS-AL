@@ -25,9 +25,31 @@ vel = 10
 isJump = False
 jumpCount = 10
 
-left = False
-right = False
-walkCount = 0
+# left = False
+# right = False
+# walkCount = 0
+
+class level:
+
+    def __init__(self, layout):
+        self.layout = layout
+
+    def levelMaker(self, layout):
+        print(layout)
+
+level1 = level([
+    '                    ',
+    '                    ',
+    '                    ',
+    '                    ',
+    '                    ',
+    'XXX              XXX',
+    'XXX              XXX',
+    'XXX              XXX',
+    'XXX              XXX',])
+
+level1.levelMaker()
+
 
 run = True
 
@@ -37,7 +59,7 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-
+    
     keys = pygame.key.get_pressed()
 
     if keys[pygame.K_a] and x > 0:
@@ -69,16 +91,6 @@ class level:
     def levelMaker(self, layout):
         print(self)
 
-level1 = level([
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    'XXX              XXX',])
 
 
 

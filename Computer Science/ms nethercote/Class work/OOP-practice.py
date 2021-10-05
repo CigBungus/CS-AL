@@ -31,7 +31,6 @@ print(f"it is now a big {thisFish.getState()}")
 '''
 
 # task 4
-
 class car:
     def __init__(self, registration, make, mileage, dateOfInspection):
        self.registration = registration
@@ -39,7 +38,17 @@ class car:
        self.mileage = 0
        self.dateOfInspection = dateOfInspection
 
+    def get_registration(self):
+        return self.registration
 
+    def get_make(self):
+        return self.make
+
+    def get_mileage(self):
+        return self.mileage
+
+    def get_dateOfInspection(self):
+        return self.dateOfInspection
 
 
 

@@ -62,28 +62,6 @@ while run:
     pygame.draw.rect(win, (104, 117, 94), (x, y, width, height))
     pygame.display.update()
 
-class level:
-    def __init__(self, layout):
-        self.layout = layout
-
-    def levelMaker(self, layout):
-        print(self)
-
-level1 = level([
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    'XXX              XXX',])
-
-
-
-
-
 pygame.quit()
 
 

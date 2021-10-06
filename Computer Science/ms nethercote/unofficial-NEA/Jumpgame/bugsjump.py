@@ -29,27 +29,6 @@ jumpCount = 10
 # right = False
 # walkCount = 0
 
-class level:
-
-    def __init__(self, layout):
-        self.layout = layout
-
-    def levelMaker(self, layout):
-        print(layout)
-
-level1 = level([
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    '                    ',
-    'XXX              XXX',
-    'XXX              XXX',
-    'XXX              XXX',
-    'XXX              XXX',])
-
-level1.levelMaker()
-
 
 run = True
 
@@ -84,21 +63,6 @@ while run:
     pygame.draw.rect(win, (104, 117, 94), (x, y, width, height))
     pygame.display.update()
 
-<<<<<<< HEAD
-=======
-class level:
-    def __init__(self, layout):
-        self.layout = layout
-
-    def levelMaker(self, layout):
-        print(self)
-
-
-
-
-
-
->>>>>>> d84538514d93c18cb8f4e06f629a7fa40cfd6411
 pygame.quit()
 
 

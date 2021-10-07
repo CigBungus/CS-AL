@@ -9,8 +9,8 @@ while True:
     min_temp = int(input("MIN_TEMPERATURE: "))
 
     
-    temp.append(max_temp)
-    temp.append(min_temp)
+    temp.append(list(max_temp))
+    temp.append(list(min_temp))
 
     print(temp)
 

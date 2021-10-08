@@ -16,18 +16,24 @@ while True:
     daily_temp.append(max_temp)
     daily_temp.append(min_temp)
 
+
 days = len(average)
 
 total_average = sum(average) / 2
 
-for i in range(days-1):
-    if average[i] == total_average:
+print(daily_temp)
+print(average)
+print(total_average)
+
+
+for i in range(1, days):
+    if average[i-1] == total_average:
         print(f"on day #{i+1} the temperature was the same as the average temperature")
 
-    elif average[i] > total_average:
+    elif average[i-1] > total_average:
         print(f"on day #{i+1} the temperature was higher than the average temperature")
         
-    elif average[i] < total_average:
+    elif average[i-1] < total_average:
         print(f"on day #{i+1} the temperature was lower than the average temperature")
 
 

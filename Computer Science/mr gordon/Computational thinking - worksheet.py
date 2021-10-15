@@ -3,7 +3,7 @@ numSweets = int(input("num sweets > "))
 
 if not(numBags % 2 == 0 and numSweets % 2 != 0 or numBags % 2 != 0 and numSweets % 2 == 0) and numSweets > numBags:
     listbags = []
-    for i in range(numBags - 1:
+    for i in range(numBags - 1):
         listbags.append(1)
 
     listbags.append(numSweets - len(listbags))

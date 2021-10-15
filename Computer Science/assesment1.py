@@ -47,7 +47,7 @@ def isprime(User_number):
     if prime == 0:
         print("is not prime")
         
-    elif prime !=:
+    elif prime != 0:
         print("is prime")
         
     repeat()

@@ -30,7 +30,8 @@ def number():
         isprime(User_number)
 
 
-    
+'''
+
 # checks if the number is prime by cycling through the numbers smaller than the number and mod divides the number by the iteration. if it returns something then its a prime if its 0 it is 
 def isprime(User_number):
     prime = 1
@@ -59,7 +60,7 @@ def repeat():
     
 number()
         
-
+'''
 
    
 

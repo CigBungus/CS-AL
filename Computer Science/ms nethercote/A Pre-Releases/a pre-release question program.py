@@ -239,6 +239,7 @@ def PlayGame(AllowedWords, TileDictionary, RandomStart, StartHandSize, MaxHandSi
   PlayerThreeScore = 50
   PlayerOneTilesPlayed = 0
   PlayerTwoTilesPlayed = 0
+  PlayerThreeTilesPlayed = 0
   TileQueue = QueueOfTiles(20)
   if RandomStart:
     PlayerOneTiles = GetStartingHand(TileQueue, StartHandSize)
@@ -254,6 +255,7 @@ def PlayGame(AllowedWords, TileDictionary, RandomStart, StartHandSize, MaxHandSi
     input("Press Enter to continue")
     print()
     PlayerTwoTiles, PlayerTwoTilesPlayed, PlayerTwoScore, TileQueue = HaveTurn("Player Two", PlayerTwoTiles, PlayerTwoTilesPlayed, PlayerTwoScore, TileDictionary, TileQueue, AllowedWords, MaxHandSize, NoOfEndOfTurnTiles)
+    PlayerThreeTiles, PlayerThreeTilesPlayed, PlayerThreeScore, TileQueue = HaveTurn("Player Three", PlayerThreeTiles, PlayerThreeTilesPlayed, PlayerThreeScore, TileDictionary, TileQueue, AllowedWords, MaxHandSize, NoOfEndOfTurnTiles) 
   PlayerOneScore = UpdateScoreWithPenalty(PlayerOneScore, PlayerOneTiles, TileDictionary)
   PlayerTwoScore = UpdateScoreWithPenalty(PlayerTwoScore, PlayerTwoTiles, TileDictionary)
   PlayerThreeScore = UpdateScoreWithPenalty(PlayerThreeScore, PlayerThreeTiles, TileDictionary)

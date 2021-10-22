@@ -1,37 +1,29 @@
-numBags = int(input("num bags > "))
-numSweets = int(input("num sweets > "))
-
-if not(numBags % 2 == 0 and numSweets % 2 != 0 or numBags % 2 != 0 and numSweets % 2 == 0) and numSweets > numBags:
-    listbags = []
-    for i in range(numBags - 1):
-        listbags.append(1)
-
-    listbags.append(numSweets - len(listbags))
-
-    print(listbags)
-
-############################################################################################################################################
-
-# while True:
-
-#     if numSweets < numBags:
-#         break
-#     elif numBags % 2 == 0 and numSweets % 2 != 0 or numBags % 2 != 0 and numSweets % 2 == 0:
-#         print("impossible to do")
-#         break
-
-#     else:
-#         sweetInBag = numSweets // numBags
-
-#         remainderSweets = numSweets % numBags
-
-#         bagList = [ sweetInBag for i in range(numBags)]
-#         print(bagList)
-#         print(len(bagList))
-#         print(remainderSweets)
-#         break
-
+def inputs():
+    numBags = int(input("num bags > "))
+    numSweets = int(input("num sweets > "))
+    inputcheck(numBags, numSweets)
+    return numBags, numSweets  
     
+
+def inputcheck(numBags, numSweets):
+    if numSweets < numBags:
+        print("the number of sweets has to be bigger than the number of bags")
+        inputs()
+    output(numBags, numSweets)
+
+def output(numBags, numSweets):
+    if numBags % 2 == 0 and numSweets % 2 != 0:
+        print("not possible.")
+    elif numBags % 2 != 0 and numSweets % 2 == 0:
+        print("not possible.")
+    else:
+        print("possible")
+
+
+if __name__ == "__main__":
+    inputs()
+
+
 
 
 

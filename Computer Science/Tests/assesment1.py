@@ -20,6 +20,8 @@ elif boolean == False:
     print("the first word cannot be made from the second word ")
 
 
+'''
+
 # asks user for number if number <= 1 breaks program
 def number():
     User_number = int(input("enter a number: "))
@@ -29,8 +31,6 @@ def number():
 
         isprime(User_number)
 
-
-    
 # checks if the number is prime by cycling through the numbers smaller than the number and mod divides the number by the iteration. if it returns something then its a prime if its 0 it is 
 def isprime(User_number):
     prime = 1
@@ -47,7 +47,7 @@ def isprime(User_number):
     if prime == 0:
         print("is not prime")
         
-    elif prime !=:
+    elif prime != 0:
         print("is prime")
         
     repeat()
@@ -59,7 +59,7 @@ def repeat():
     
 number()
         
-
+'''
 
    
 

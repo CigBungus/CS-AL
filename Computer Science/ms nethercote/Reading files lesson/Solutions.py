@@ -38,7 +38,4 @@ print('F or f:',countF)
 '''
 ### task 3 solution ###
 
-file = open("Task3.txt", "r")
-lines = file.readlines()
 
-print(lines)

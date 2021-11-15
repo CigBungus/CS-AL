@@ -1,5 +1,5 @@
 ### task 1 solution ###
-
+'''
 file = open("Task1.txt", "r") # opens a file to read it
 file_lines = file.readlines() # reads each seperate line of the file
 file.close() # closes the file
@@ -35,6 +35,10 @@ print('S or s:',countS)
 print('D or d:',countD)
 print('F or f:',countF)
 
-
+'''
 ### task 3 solution ###
-    
+
+file = open("Task3.txt", "r")
+lines = file.readlines()
+
+print(lines)

@@ -1,0 +1,10 @@
+ nonremittal,
+liver,
+  trainer,
+prestige,
+ kick,
+applaud,
+merchant,
+     lung,
+tap,
+folk
